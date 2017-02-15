@@ -1,0 +1,1139 @@
+// 重置样式all-music
+@import "../libs/normalize-css/normalize.css";
+
+@font-face {
+    font-family: 'iconfont';  /* project id 199090 */
+    src: url("../font/iconfont.ttf");
+}
+
+*{
+    font-family: '黑体';
+    user-select:none;
+}
+
+.fr{
+    float: right;
+}
+
+.fl{
+    float: left;
+}
+
+@head_foot_border: #e3e3e3;
+@font_color: #a7a7a7;
+@red163: #e10000;
+@font_white:#fdfdfd;
+@font_player: #bdbdbd;
+@font_startpage: #8a8a8a;
+.main_con{
+    width:100vw;
+    height:92vh;
+    position: fixed;
+    //transition: transform 0.5s ease;
+    overflow-y: scroll;
+    z-index:5;
+}
+
+.hideplayer{
+    transform: translate(100vw,0);
+}
+
+.showplayer{
+    transform: translate(0,0);
+}
+
+.player_icon{
+    position: relative;
+    z-index:1000;
+}
+//播放器页面
+.player_con{
+    width:100vw;
+    height:100vh;
+    position: fixed;
+    transition: transform 0.5s ease;
+    overflow:hidden;
+    z-index: 1001;
+    background: url('../images/1.jpg') no-repeat center center;
+    background-size: 100vh 100vh;
+    .frosted-glass{
+        width: 100vw;
+        height: 100vh;
+        background: inherit;
+        transform: scale(1.3,1.3);
+        transform-origin:50% 50%;
+        -webkit-filter: blur(10px);
+           -moz-filter: blur(10px);
+            -ms-filter: blur(10px);
+                filter: blur(10px);
+        filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=4, MakeShadow=false);
+    }
+    .player_bgmask{
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0,0.5);
+        z-index: 1002;
+    }
+    .player_headcon{
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100vw;
+        height: 100vh;
+        z-index: 2000;
+        color:@font_white;
+        .player_head{
+            width:100%;
+            height:8vh;
+            display: flex;
+            .player_musicname{
+                font-size: 2.5vh;
+                line-height: 5.5vh;
+            }
+            .player_musicauthor{
+                font-size: 1.5vh;
+                line-height: 1vh;
+                color:@font_player;
+            }
+            i{
+                width:15vw;
+                text-align: center;
+                line-height: 8vh;
+                font-size: 4vh;
+            }
+            .player_title{
+                flex: 1;
+            }
+        }
+    }
+    .player_line{
+        width:80vw;
+        margin:0 auto;
+        height:1px;
+        background: -webkit-linear-gradient(left,transparent, @font_player,transparent);
+    }
+    .player_focus{
+        width:100%;
+        height:70vh;
+        overflow: hidden;
+        position: relative;
+        .player_pointer{
+            width:40vw;
+            position: absolute;
+            transform: translate(46vw,-2.5vh) rotate(15deg);//播放时40deg
+            transform-origin: 10% 25%;
+            transition: transform 1s ease;
+            z-index: 3000;
+        }
+        .playpointer{
+            transform: translate(46vw,-2.5vh) rotate(40deg);
+         }
+        .record{
+            background: url('../images/source/p-2.png') no-repeat;
+            background-size: 40vh;
+            width:40vh;
+            height:40vh;
+            margin:7vh auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                width:60%;
+                height:60%;
+                border-radius: 50%;
+            }
+        }
+    }
+    .player_opcon{
+        display: flex;
+        width:70vw;
+        margin:0 auto;
+        i{
+            flex: 1;
+            text-align: center;
+            font-size: 4vh;
+        }
+        .player_love,
+        .player_operation{
+            line-height: 6vh;
+        }
+        .xinlovecolor{
+            color:@red163;
+        }
+        .player_comment{
+            line-height: 5.5vh;
+        }
+    }
+    .progress_con{
+        width:100%;
+        height:2.5vh;
+        display:flex;
+        align-items: center;
+        margin: 1.75vh 0;
+        span{
+            width:15vw;
+            font-size: 1vh;
+            text-align: center;
+            color:@font_player;
+        }
+
+        .pro_con{
+            width:70vw;
+            height:1.75vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .pro_slide_btn{
+                width:1.75vh;
+                height:1.75vh;
+                background:@font_white;
+                border-radius: 50%;
+                position: absolute;
+                left:-2%; //偏左2%
+            }
+            .player_pro{
+                width:70vw;
+                height:2px;
+                border-radius: 2px;
+            }
+
+            .player_pro::-webkit-progress-bar {
+                background:#b6b6b6
+            }
+
+            .player_pro::-webkit-progress-value,.sound_pro::-webkit-progress-value {
+                background:#e61d16;
+                border-bottom-right-radius: 2px;
+                border-top-right-radius: 2px;
+            }
+        }
+    }
+    .player_opbar{
+        display:flex;
+        width:74vw;
+        margin:0 auto;
+        align-items: center;
+        .player_play{
+            flex: 1;
+            font-size: 7vh;
+        }
+        .player_prev{
+            flex: 1;
+            font-size: 5.5vh;
+            text-align: center;
+        }
+        .player_next{
+            flex: 1;
+            font-size: 5.5vh;
+            text-align: center;
+        }
+        .player_playlist{
+            font-size: 3vh;
+            text-align: right;
+            flex: .5;
+        }
+        .player_ctrl{
+            font-size: 3vh;
+            text-align: left;
+            flex: .5;
+        }
+        i{
+            text-align: center;
+            font-size: 5vh;
+        }
+    }
+    .player{
+        display:none;
+    }
+}
+
+.playrecord{
+    animation: play_rotate 20s linear infinite;
+}
+.pauserecord{
+    animation-play-state:paused;
+}
+
+
+@keyframes play_rotate {
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+//发现音乐
+.findmusic_con{
+    //transform: translate(-100vw,0);
+    .findmusic_title{
+        position: absolute;
+        width:100%;
+        height:6vh;
+        text-align: center;
+        font-size: .8rem;
+        font-weight: 100;
+        line-height: 6vh;
+        border-bottom:1px solid @head_foot_border;
+    }
+    .findmusic_headop{
+        line-height: 6vh;
+        span{
+            float: left;
+            font-size: .7rem;
+            margin-left: 2vw;
+        }
+        i{
+            float: right;
+            font-size: 1.2rem;
+            margin-right: 2vw;
+        }
+    }
+    .findmusic_num{
+        height:4.5vh;
+        margin-top:6vh;
+        font-size: 2vh;
+        line-height: 4.5vh;
+        background: #edeeef;
+        padding:0 2vw;
+        color:@font_color;
+        i{
+            margin-right: 2vw;
+        }
+    }
+
+    .findmusic_list{
+        list-style: none;
+        margin:0;
+        padding:0;
+
+        li{
+            margin: 0;
+            display: flex;
+            padding:1vh 0 0 0;
+            img{
+                width:8vh;
+                height:8vh;
+                display: block;
+                margin-left: 1.5vh;
+            }
+            .findmusic_info{
+                white-space:nowrap;
+                overflow:hidden;
+                text-overflow:ellipsis;
+                margin-left: 1.5vh;
+                height:8vh;
+                flex: 1;
+                display: inline-block;
+                padding:1vh 0 0 0;
+                border-bottom: 1px solid @head_foot_border;
+
+                .findmusic_name{
+                    font-size: 3vh;
+                }
+                .findmusic_singer{
+                    font-size: 2.1vh;
+                    line-height: 3.5vh;
+                    display: block;
+                    color:@font_color;
+                    white-space:nowrap;
+                    overflow:hidden;
+                    text-overflow:ellipsis;
+                    span{
+                        margin-right: 2vh;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//我的音乐
+.mymusic_con{
+    //transform: translate(0,0);
+    .mymusic_info{
+        width:100%;
+        height:40vh;
+        background: url(../images/source/mbg.jpg) no-repeat center center;
+        background-size: 100%;
+        position: relative;
+        .mymusic_head{
+            width:100%;
+            text-align: center;
+            font-size: .8rem;
+            font-weight: 100;
+            color:@font_white;
+            line-height: 6vh;
+            .mymusic_back{
+                float: left;
+                font-size: 1.5rem;
+            }
+
+            .mymusic_edit,
+            .mymusic_nowplay{
+                float: right;
+                font-size: 1.2rem;
+                margin-right: 2vw;
+            }
+        }
+
+        .mymusic_head:after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        .mymusic_title{
+            display: block;
+            width:100%;
+            height:6vh;
+            position: absolute;
+            top:0;
+            left:0;
+            text-align: center;
+            color:@font_white;
+            line-height: 6vh;
+            font-size: .8rem;
+        }
+
+        .mymusic_info_center{
+            width:100%;
+            height:25vh;
+            box-sizing: border-box;
+            padding:1.5vh 3vw;
+            .mymusic_imgcon{
+                width:22vh;
+                position: relative;
+                float: left;
+            }
+            .mymusic_imgcon img{
+                display: block;
+                height:22vh;
+            }
+            .img_mask{
+                position: absolute;
+                width:22vh;
+                height:22vh;
+                top:0;
+                left:0;
+                display:block;
+                background: rgba(0,0,0,.4);
+            }
+            .love_icon{
+                position: absolute;
+                width:22vh;
+                height:22vh;
+                top:2vh;
+                left:2vh;
+                display:block;
+                color:@font_white;
+                font-size: 18vh;
+            }
+            .listener_con{
+                position: absolute;
+                top: 0;
+                right:1vw;
+                color:@font_white;
+                font-size: 2vh;
+                display:flex;
+                align-items: center;
+                .erji{
+                    font-size: 2.4vh;
+                }
+            }
+
+            .mymusic_textcon{
+                color:@font_white;
+                box-sizing: border-box;
+                padding-top: 2vh;
+                padding-left: 24vh;
+                .mylovemusic{
+
+                }
+                img{
+                    display: block;
+                    width:5vh;
+                    border-radius: 50%;
+                }
+                .my_name{
+                    display: flex;
+                    align-items: center;
+                    margin-top: 3.5vh;
+                    color:@font_color;
+                    span{
+                        font-size: 3vh;
+                        padding: 0 1vh;
+                    }
+                    i{
+                        font-size: 3vh;
+                    }
+                }
+            }
+            .mymusic_operationcon{
+                width:100%;
+                height:9vh;
+                display: flex;
+                color:@font_white;
+                box-sizing: border-box;
+                //padding-top:1.5vh;
+                section{
+                    flex: 1;
+                    text-align: center;
+                    font-size: 2.2vh;
+                    i{
+                        font-size: 4vh;
+                    }
+                    div{
+                        padding-top:1.2vh;
+                    }
+                }
+            }
+        }
+    }
+    .mymusic_list_con{
+        box-sizing: border-box;
+        padding:0 0 0 1.5vh;
+        font-size: 2.9vh;
+        .list_head{
+            width:100%;
+            height:8vh;
+            line-height: 8vh;
+            .allplay_icon{
+                font-size: 3.2vh;
+                margin-right: 1vh;
+            }
+            .music_sum{
+                font-size: 2.4vh;
+                color:@font_color
+            }
+            .music_list_icon{
+                font-size: 3vh;
+                float: right;
+                margin-right: 1.5vh;
+            }
+        }
+        .nomusic_list{
+             display:none;
+             width:100%;
+             height:30vh;
+             padding-right: 1vh;
+             box-sizing: border-box;
+             text-align: center;
+             .nomusic_list_title{
+                 font-size: 2.5vh;
+                 margin:3vh 0;
+             }
+             .nomusic_list_text{
+                 font-size: 2vh;
+                 color:@font_startpage;
+                 i{
+                     color:@red163;
+                 }
+             }
+        }
+        .shownull{
+              display:block;
+        }
+        .mymusic_list{
+            list-style: none;
+            margin:0;
+            padding:0;
+
+
+
+        }
+        .mymusic_list li{
+            list-style: none;
+            margin:0;
+            padding:0;
+            width:100%;
+            height:9vh;
+            line-height: 9vh;
+            display: flex;
+            .list_num{
+                float: left;
+                width:8vw;
+                font-size: 3vh;
+                box-sizing: border-box;
+                padding-left: 1vh;
+                color:@font_color;
+            }
+            .list_info{
+                flex: 1;
+                height:8vh;
+                font-size: 2vh;
+                padding:0;
+                margin:0;
+                box-sizing: border-box;
+                border-top:1px solid @head_foot_border;
+                div{
+                    height:4.5vh;
+                    padding:0;
+                    margin:0;
+                    line-height: 4vh;
+                    box-sizing: border-box;
+
+                }
+                .music_title{
+                    font-size: 2.9vh;
+                    line-height: 6vh;
+                }
+                .music_singer{
+                    color:@font_color;
+                    line-height: 3vh;
+                }
+            }
+            .music_op_con{
+                float: right;
+                width:7vw;
+                height:9vh;
+                padding-right: 2vw;
+                border-top:1px solid @head_foot_border;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .music_op{
+                    border:1px solid @head_foot_border;
+                    height:3.4vh;
+                    width:100%;
+                    border-radius: 1.5vw;
+                    i{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        line-height: 4vh;
+                        font-size: 4vh;
+                    }
+                }
+
+            }
+        }
+
+    }
+
+}
+
+
+.friends_con{
+    overflow-x: hidden;
+    .friends_title{
+        background: @red163;
+        color:@font_white;
+        width:100%;
+        height:6vh;
+        text-align: center;
+        font-size: .8rem;
+        font-weight: 100;
+        line-height: 6vh;
+        border-bottom:1px solid @head_foot_border;
+    }
+    .hot_title_con{
+        padding:2vh 3vw;
+        .hot_title{
+            font-size: 3vh;
+        }
+        .hot_more{
+            font-size: 2.3vh;
+            color:@font_startpage;
+            float: right;
+            line-height: 5vh;
+            i{
+                font-size: 2.3vh;
+            }
+        }
+    }
+    .hot_con{
+        height:16vh;
+        width:100vw;
+        box-sizing: border-box;
+        padding:0 3vw;
+        overflow-x: scroll;
+        border-bottom:1px solid @head_foot_border;
+        .hot_focus{
+            width:300vw;
+            .focusimg_con{
+                width:40vw;
+                height:13vh;
+                float: left;
+                margin-right: 3vw;
+                text-align: center;
+                position: relative;
+                img{
+                    width:100%;
+                    height:100%;
+                }
+                .hot_focus_title{
+                    position: absolute;
+                    width:100%;
+                    height:100%;
+                    z-index: 2;
+                    top:0;
+                    left:0;
+                    font-size: 2.2vh;
+                    line-height: 13vh;
+                    color:@font_white;
+                }
+            }
+        }
+    }
+
+    .release_info_con{
+        .friends_listwrap{
+            list-style: none;
+            margin:0;
+            padding:3vh 3vw 1vh 3vw;
+            border-bottom:1px solid @head_foot_border;
+            .friends_list{
+                display: flex;
+                margin-bottom: 2.5vh;
+                .friends_head{
+                    flex: 1;
+                    img{
+                        width:12vw;
+                        border-radius: 50%;
+                    }
+                }
+                .friendsinfo_con{
+                    font-size: 2.5vh;
+                    box-sizing: border-box;
+                    padding-left: 3vw;
+                    .friendsinfo{
+                        height:12vw;
+                        .nickname{
+                            color: #6b7aff;
+                        }
+                        .follow{
+                            font-size: 2vh;
+                            border:1px solid @red163;
+                            border-radius: 3px;
+                            color:@red163;
+                            padding:.5vh 1vh;
+                            .add_icon{
+                                font-weight: bold;
+                                margin-right: 1vw;
+                            }
+                        }
+                        .send_time{
+                            color:@font_color;
+                            font-size: 2vh;
+                            line-height: 4vh;
+                        }
+                    }
+                    .friends_text{
+                        margin:1.5vh 0;
+                        line-height: 3.5vh;
+                    }
+                    .friends_img{
+                        display:flex;
+                        flex-wrap:  wrap;
+                        img{
+                            margin:0 1% 1% 0;
+                            padding:0;
+                            display: block;
+                            width:48%;
+                            height:48%;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.account_con{
+    background: #f4f4f4;
+    .account_title{
+        background: @red163;
+        color:@font_white;
+        width:100%;
+        height:6vh;
+        text-align: center;
+        font-size: .8rem;
+        font-weight: 100;
+        line-height: 6vh;
+        border-bottom:1px solid @head_foot_border;
+    }
+    .headinfo_con{
+        display:none;
+        width:100vw;
+        height:22vh;
+        background: @font_white;
+        box-sizing: border-box;
+        padding:2vh 3vw;
+        .logout_text{
+            font-size: 2.8vh;
+            text-align: center;
+            margin:1vh 0;
+        }
+        .account_login{
+            margin-top:2vh;
+            font-size: 3.2vh;
+            border:1px solid @head_foot_border;
+            border-radius: 5px;
+            text-align: center;
+            height:5.5vh;
+            line-height: 5.5vh;
+        }
+
+        .logininfo_con{
+            //background: red;
+            height:60%;
+            display:flex;
+            img{
+                display: block;
+                height:100%;
+                border-radius: 50%;
+            }
+            .login_namelv_con{
+                flex: 2;
+                box-sizing: border-box;
+                padding:2vh;
+                .login_lv{
+                    display: inline-block;
+                    font-size: 2.5vh;
+                    margin-top:1vh;
+                    border:1px solid @head_foot_border;
+                    border-radius:2.5vh;
+                    padding:0 1vh ;
+                }
+            }
+            .sign_con{
+                display: flex;
+                align-items: center;
+                .sign{
+                    font-size: 2.5vh;
+                    border:1px solid @red163;
+                    color:@red163;
+                    padding:0.8vh 1.3vh;
+                    border-radius: 5px;
+                    i{
+                        font-size: 2.5vh;
+                    }
+                }
+            }
+        }
+        .hr{
+            height:1px ;
+            width:100vw;
+            margin-left: -1.6vh;
+            background: @head_foot_border;
+            margin-top:1vh;
+        }
+        .logininfo_op{
+            margin-top:1vh;
+            display:flex;
+            .bor_ri{
+                border-right: 1px solid @head_foot_border;
+            }
+            section{
+                text-align: center;
+                flex: 1;
+                .logininfo_op_text{
+                    font-size: 2.3vh;
+                    color:@font_color;
+                }
+                .logininfo_op_num{
+                    font-size: 2.7vh;
+                    i{
+                        font-size: 2.7vh;
+                    }
+                }
+            }
+        }
+    }
+    ul{
+        box-sizing: border-box;
+        margin:0;
+        margin-top:2vh;
+        padding:0 3vw;
+        background: @font_white;
+    }
+    li{
+        margin:0;
+        padding:0;
+        list-style: none;
+        height:7vh;
+        line-height: 7vh;
+        font-size: 3vh;
+        i,.change_skin{
+            color:@font_color;
+            font-size: 3vh;
+        }
+        i:first-child{
+            margin-right: 2vw;
+        }
+        i:last-child{
+            float: right;
+            font-size: 2.5vh;
+        }
+        .change_skin{
+            float: left;
+            font-size: 2.7vh;
+        }
+    }
+    .logout_con{
+        display:none;
+        .logout{
+            background: @red163;
+            color:@font_white;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 2vh;
+        }
+    }
+
+    li:not(:last-child){
+        border-bottom: 1px solid @head_foot_border;
+    }
+
+    .show{
+        display:block;
+    }
+}
+
+
+.page{
+    transform: translate(0,0);
+}
+
+.prevpage{
+    transform: translate(-100vw,0);
+}
+
+.nextpage{
+    transform: translate(100vw,0);
+}
+
+.showpage{
+    transition: transform 0.3s ease;
+    transform: translate(0,0);
+}
+
+.showprevpage{
+    transition: transform 0.3s ease;
+    transform: translate(-100vw,0);
+}
+
+.shownextpage{
+    transition: transform 0.3s ease;
+    transform: translate(100vw,0);
+}
+
+
+
+
+footer{
+    width:100%;
+    height:8vh;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    border-top:1px solid @head_foot_border;
+    display: flex;
+    background: #f4f4f4;
+    z-index:999;
+    .foot_nav_btn{
+        flex:1;
+        box-sizing: border-box;
+        font-size: 1.8vh;
+        color:@font_color;
+        text-align: center;
+        padding-top: 0.2vh;
+        i{
+            font-size: 4.8vh;
+        }
+    }
+
+    .nav_active{
+        color: @red163;
+    }
+}
+
+
+.startpage_con{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    z-index: 9999;
+    background: url("../images/source/login_bg.jpg") no-repeat 0 0;
+    background-size: 100vw 100vh;
+    .startpage{
+        position: relative;
+        width:100vw;
+        height:100vh;
+        display: none;
+        .logo{
+            width:15vh;
+            height: 15vh;
+            margin:10vh auto;
+            background: url('../images/source/wylogo.png') no-repeat 0 0;
+            background-size: 100%;
+            -webkit-box-reflect: below 2px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), to(rgba(250, 250, 250, 0.14)));
+        }
+        .startpage_op{
+            width:80vw;
+            height:6vh;
+            margin:3vh auto;
+            border:1px solid @red163;
+            border-radius: 3vh;
+            color:@red163;
+            font-size: 2.5vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .ontrial{
+            font-size: 2vh;
+            text-align: center;
+            color: #494949;
+            i{
+                margin-right: -1.4vh;
+            }
+            i:nth-child(1){
+                color: #494949;
+            }
+            i:nth-child(2){
+                color: #a1a1a1;
+            }
+            i:nth-child(3){
+                color: #e0e0e0;
+            }
+        }
+        .startpage_op_ts{
+            background: @red163;
+            color:@font_white;
+        }
+        .startpage_foot{
+            position: absolute;
+            width:100%;
+            height:30vh;
+            bottom:0;
+            .startpage_foot_title{
+                text-align: center;
+                margin:2vh 0;
+                font-size: 2vh;
+                color:@font_startpage;
+            }
+            .login_type_con{
+                width:70%;
+                display: flex;
+                margin:0 auto;
+                .login_type{
+                    flex: 1;
+                    text-align: center;
+                    img{
+                        display: block;
+                        margin:1vh auto;
+                        width:6vh;
+                    }
+                    .login_type_text{
+                        color:@font_startpage;
+                        font-size: 1.5vh;
+                    }
+                }
+            }
+
+        }
+    }
+    .login_page,
+    .signup_page{
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        .login_title{
+            height:8vh;
+            background:@font_white;
+            display: flex;
+            align-items: center;
+            //box-shadow: 0 2px 12px #888888;
+            margin-bottom: 5vh;
+            span{
+                font-size: 2.5vh;
+            }
+            i{
+                width:15vw;
+                text-align: center;
+                font-size: 3.5vh;
+            }
+        }
+        .user_input{
+            max-width:80vw;
+            border-bottom: 1px solid @font_player;
+            margin:3vh auto;
+            display: flex;
+            align-items: center;
+            font-family: arial, sans-serif;
+            i{
+                width:6vh;
+                height:6vh;
+                font-size: 3vh;
+                line-height: 6vh;
+            }
+            input{
+                flex: 1;
+                height:8vh;
+                font-size: 2.5vh;
+                line-height: 6vh;
+                box-sizing: border-box;
+            }
+            .forgetpass{
+                flex:1;
+                color: #618aff;
+                font-size: 2vh;
+                text-align: right;
+            }
+        }
+        #username,
+        #userpass,
+        #usersignupname,
+        #usersignuppass{
+            width:30vh;
+            height:6vh;
+            border:none;
+            background: transparent;
+            outline:none;
+        }
+
+        .login_btn{
+            max-width:80vw;
+            height:6vh;
+            background: @red163;
+            margin:5vh auto;
+            border-radius: 3px;
+            font-size: 2.5vh;
+            text-align: center;
+            line-height: 6vh;
+            color:@font_white;
+        }
+    }
+
+    .signup_page{
+        display: none;
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .show{
+        display: block;
+    }
+}
+
+.warn{
+    max-width:80vw;
+    height:6vh;
+    background: #5e585c;
+    margin:5vh auto;
+    border-radius: 3px;
+    font-size: 2.5vh;
+    text-align: center;
+    line-height: 6vh;
+    color:@font_white;
+    display: none;
+    transition: all 0.5s ease;
+}
+

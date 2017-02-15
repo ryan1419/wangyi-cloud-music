@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>网易云音乐</title>
+    <link rel="stylesheet" href="./font/iconfont.css"/>
+    <link rel="stylesheet" href="./css/mobile.css">
+</head>
+<body>
+    <section class="container">
+        <!--index-->
+        <section class="startpage_con">
+            <!-- index -->
+            <section class="startpage show">
+                <div class="logo"></div>
+                <section class="startpage_op" id="go_login">
+                    手机号登录
+                </section>
+                <section class="startpage_op" id="go_signup">
+                    注册
+                </section>
+                <section class="ontrial" id="ontrial">
+                    游客试用
+                    <i class="iconfont icon-you"></i>
+                    <i class="iconfont icon-you"></i>
+                    <i class="iconfont icon-you"></i>
+                </section>
+                <section class="startpage_foot">
+                    <section class="startpage_foot_title">其他登录方式</section>
+                    <section class="login_type_con">
+                        <section class="login_type">
+                            <img src="./images/source/weixin.png" alt=""/>
+                            <section class="login_type_text">微信</section>
+                        </section>
+                        <section class="login_type">
+                            <img src="./images/source/qq.png" alt=""/>
+                            <section class="login_type_text">QQ</section>
+                        </section>
+                        <section class="login_type">
+                            <img src="./images/source/sina.png" alt=""/>
+                            <section class="login_type_text">新浪微博</section>
+                        </section>
+                        <section class="login_type">
+                            <img src="./images/source/wy.png" alt=""/>
+                            <section class="login_type_text">网易邮箱</section>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <!--登陆 -->
+            <section class="login_page">
+                <section class="login_title">
+                    <i class="iconfont icon-houtui" id="loginto_start"></i>
+                    <span>手机号登录</span>
+                </section>
+                <section class="user_input">
+                    <label for="username"></label>
+                    <i class="iconfont icon-0039"></i>
+                    <input type="number" id="username" placeholder="请输入手机号"/>
+                </section>
+
+                <section class="user_input">
+                    <label for="userpass"></label>
+                    <i class="iconfont icon-suo_fuzhi"></i>
+                    <input type="password" id="userpass" placeholder="请输入密码"/>
+                    <span class="forgetpass">忘记密码？</span>
+                </section>
+                <section class="login_btn" id="login_btn">登录</section>
+            </section>
+            <!-- 注册 -->
+            <section class="signup_page">
+                <section class="login_title">
+                    <i class="iconfont icon-houtui" id="signupto_start"></i>
+                    <span>手机号注册</span>
+                </section>
+                <section class="user_input">
+                    <label for="username"></label>
+                    <i class="iconfont icon-0039"></i>
+                    <input type="number" id="usersignupname" placeholder="请输入手机号"/>
+                </section>
+
+                <section class="user_input">
+                    <label for="userpass"></label>
+                    <i class="iconfont icon-suo_fuzhi"></i>
+                    <input type="password" id="usersignuppass" placeholder="设置登录密码不少于6位"/>
+                </section>
+                <section class="login_btn" id="signup_btn">注册</section>
+                <section class="warn"></section>
+            </section>
+        </section>
+
+        <!--发现音乐-->
+        <section class="main_con findmusic_con prevpage">
+            <section class="findmusic_headop">
+                <span>更多</span>
+                <i class="iconfont icon-yinle player_icon"></i>
+            </section>
+            <section class="findmusic_title">发现音乐</section>
+            <section class="findmusic_num">
+                <i class="iconfont icon-xia"></i>
+                <span>发现的歌单(<span id="allmusic_num"></span>)</span>
+            </section>
+
+            <ul class="findmusic_list" id="findmusic_list">
+                <li  data-src="./1122334455.jjj">
+                    <img src="./images/2.jpg" alt=""/>
+                    <section class="findmusic_info">
+                        <div class="findmusic_name">红色高跟鞋</div>
+                        <div class="findmusic_singer"><span>蔡雅健</span><span>专辑:<span>Grmemy</span></span></div>
+                    </section>
+                </li>
+                <li  data-src="./6677889900.jjj">
+                    <img src="./images/2.jpg" alt=""/>
+                    <section class="findmusic_info">
+                        <div class="findmusic_name">红色高跟鞋</div>
+                        <div class="findmusic_singer"><span>蔡雅健</span><span>专辑:<span>Grmemyasdasdsada asdasd asdasdasdasdasdasdasdasdasd</span></span></div>
+                    </section>
+                </li>
+            </ul>
+        </section>
+
+        <!--我的音乐-->
+        <section class="main_con mymusic_con page">
+            <section class="mymusic_info">
+                <nav class="mymusic_head">
+                    <i class="iconfont icon-zuo mymusic_back"></i>
+                    <i class="iconfont icon-yinle mymusic_nowplay player_icon"></i>
+                    <i class="iconfont icon-bianji mymusic_edit"></i>
+                </nav>
+                <span class="mymusic_title">歌单</span>
+                <section class="mymusic_info_center">
+                    <section class="mymusic_imgcon">
+                        <img src="images/source/6.jpg" alt=""/>
+                        <div class="img_mask"></div>
+                        <i class="iconfont icon-xin love_icon"></i>
+                        <span class="listener_con">
+                            <i class="iconfont icon-yinle1 erji"></i>
+                            <span>1826</span>
+                        </span>
+                    </section>
+                    <section class="mymusic_textcon">
+                        <div class="mylovemusic">我喜欢的音乐</div>
+                        <div class="my_name">
+                            <img src="./images/source/head.jpg" alt=""/>
+                            <span>Satan</span>
+                            <i class="iconfont icon-you"></i>
+                        </div>
+                    </section>
+                    <section class="mymusic_operationcon">
+                        <section>
+                            <div><i class="iconfont icon-shoucangshoucang"></i></div>
+                            <div>收藏</div>
+                        </section>
+                        <section>
+                            <div><i class="iconfont icon-pinglun"></i></div>
+                            <div>评论</div>
+                        </section>
+                        <section>
+                            <div><i class="iconfont icon-fenxiang1"></i></div>
+                            <div>分享</div>
+                        </section>
+                        <section>
+                            <div><i class="iconfont icon-xiazai"></i></div>
+                            <div>下载</div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+            <section class="mymusic_list_con">
+                <section class="list_head">
+                    <i class="iconfont icon-bofang allplay_icon"></i>
+                    <span>播放全部</span>
+                    <span class="music_sum">(共<span id="allmusicnum">0</span>首)</span>
+                    <i class="iconfont icon-caidan music_list_icon"></i>
+                </section>
+                <section class="nomusic_list">
+                    <section class="nomusic_list_title">暂无音乐</section>
+                    <section class="nomusic_list_text">播放或浏览音乐时，点击 <i class="iconfont icon-xin"></i> 按钮可以吧音乐</section>
+                    <section class="nomusic_list_text">加入到自己的歌单</section>
+                </section>
+                <ul class="mymusic_list" id="mymusic_list">
+
+
+                    <!--<li>-->
+                        <!--<div class="list_num">1</div>-->
+                        <!--<div class="list_info">-->
+                            <!--<div class="music_title">Game of Thrones Medley</div>-->
+                            <!--<div class="music_singer">2Cellos - Game of Thrones Medley</div>-->
+                        <!--</div>-->
+                        <!--<div class="music_op_con">-->
+                            <!--<div class="music_op">-->
+                                <!--<i class="iconfont icon-shenglve"></i>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</li>-->
+                </ul>
+            </section>
+        </section>
+
+        <!--朋友-->
+        <section class="main_con friends_con nextpage">
+            <section class="friends_title">朋友</section>
+            <section class="hot_title_con">
+                <span class="hot_title">热门话题</span>
+                <span class="hot_more">更多<i class="iconfont icon-you"></i></span>
+            </section>
+            <section class="hot_con">
+                <section class="hot_focus">
+                    <div class="focusimg_con">
+                        <img src="./images/source/f1.jpg" alt=""/>
+                        <!--<div class="hot_focus_mask"></div>-->
+                        <span class="hot_focus_title">#晒出你的童年照#</span>
+                    </div>
+
+                    <div class="focusimg_con">
+                        <img src="./images/source/f2.jpg" alt=""/>
+                        <!--<div class="hot_focus_mask"></div>-->
+                        <span class="hot_focus_title">#一句话破坏氛围#</span>
+                    </div>
+
+                    <div class="focusimg_con">
+                        <img src="./images/source/friend_3.jpg" alt=""/>
+                        <!--<div class="hot_focus_mask"></div>-->
+                        <span class="hot_focus_title">#晒出你的童年照#</span>
+                    </div>
+
+                    <div class="focusimg_con">
+                        <img src="./images/source/f4.jpg" alt=""/>
+                        <!--<div class="hot_focus_mask"></div>-->
+                        <span class="hot_focus_title">#晒出你的童年照#</span>
+                    </div>
+                    <div class="focusimg_con">
+                        <img src="./images/source/f3.jpeg" alt=""/>
+                        <!--<div class="hot_focus_mask"></div>-->
+                        <span class="hot_focus_title">#晒出你的童年照#</span>
+                    </div>
+                </section>
+            </section>
+            <section class="release_info_con">
+                <section class="friends_listwrap">
+                    <section class="friends_list">
+                        <div class="friends_head">
+                            <img src="./images/45.jpg" alt=""/>
+                        </div>
+                        <div class="friendsinfo_con">
+                            <div class="friendsinfo">
+                                <div><span class="nickname">你要不要吃鱼</span> <span class="fr"><span>分享单曲:</span> <span class="follow"><span class="add_icon">+</span>关注</span></span></div>
+                                <div class="send_time">昨天 15:16</div>
+                            </div>
+                            <div class="friends_text">会玩会玩，一位名叫David Cubero的外国人，用现代偶像英雄有趣的重现注明的画作，你能认识几幅。。。</div>
+                            <div class="friends_img">
+                                <img src="./images/14.jpg" alt=""/>
+                                <img src="./images/15.jpg" alt=""/>
+                                <img src="./images/16.jpg" alt=""/>
+                                <img src="./images/17.jpg" alt=""/>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="friends_listwrap">
+                    <section class="friends_list">
+                        <div class="friends_head">
+                            <img src="./images/44.jpg" alt=""/>
+                        </div>
+                        <div class="friendsinfo_con">
+                            <div class="friendsinfo">
+                                <div><span class="nickname">The COM</span> <span class="fr"><span>分享单曲:</span> <span class="follow"><span class="add_icon">+</span>关注</span></span></div>
+                                <div class="send_time">最近</div>
+                            </div>
+                            <div class="friends_text">隔着屏幕笑出声啊。。哈哈哈，一点都不尴尬！是吧！！</div>
+                            <div class="friends_img">
+                                <img src="./images/24.jpg" alt=""/>
+                                <img src="./images/25.jpg" alt=""/>
+                                <img src="./images/26.jpg" alt=""/>
+                                <img src="./images/27.jpg" alt=""/>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="friends_listwrap">
+                    <section class="friends_list">
+                        <div class="friends_head">
+                            <img src="./images/37.jpg" alt=""/>
+                        </div>
+                        <div class="friendsinfo_con">
+                            <div class="friendsinfo">
+                                <div><span class="nickname">唐小喵</span> <span class="fr"><span>分享单曲:</span> <span class="follow"><span class="add_icon">+</span>关注</span></span></div>
+                                <div class="send_time">昨天 10:48</div>
+                            </div>
+                            <div class="friends_text">会玩会玩，一位名叫David Cubero的外国人，用现代偶像英雄有趣的重现注明的画作，你能认识几幅。。。</div>
+                            <div class="friends_img">
+                                <img src="./images/44.jpg" alt=""/>
+                                <img src="./images/45.jpg" alt=""/>
+                                <img src="./images/41.jpg" alt=""/>
+                                <img src="./images/42.jpg" alt=""/>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+
+                <section class="friends_listwrap">
+                    <section class="friends_list">
+                        <div class="friends_head">
+                            <img src="./images/38.jpg" alt=""/>
+                        </div>
+                        <div class="friendsinfo_con">
+                            <div class="friendsinfo">
+                                <div><span class="nickname">あり稼働</span> <span class="fr"><span>分享单曲:</span> <span class="follow"><span class="add_icon">+</span>关注</span></span></div>
+                                <div class="send_time">昨天 6:05</div>
+                            </div>
+                            <div class="friends_text">会玩会玩，一位名叫David Cubero的外国人，用现代偶像英雄有趣的重现注明的画作，你能认识几幅。。。</div>
+                            <div class="friends_img">
+                                <img src="./images/34.jpg" alt=""/>
+                                <img src="./images/35.jpg" alt=""/>
+                                <img src="./images/36.jpg" alt=""/>
+                                <img src="./images/37.jpg" alt=""/>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </section>
+
+        </section>
+
+        <!--账号-->
+        <section class="main_con account_con nextpage">
+            <section class="account_title">账号</section>
+
+            <section class="headinfo_con" id="account_logout_con">
+                <section class="logout_text">登陆网易云音乐</section>
+                <section class="logout_text">手机电脑多端同步，320k高音质无线下载</section>
+                <section class="account_login" id="account_login">立即登录</section>
+            </section>
+
+            <section class="headinfo_con" id="account_login_con">
+                <section class="logininfo_con">
+                    <img src="./images/source/head.jpg" alt=""/>
+                    <div class="login_namelv_con">
+                        <div id="account_username">tangmusen</div>
+                        <div class="login_lv">lv.5</div>
+                    </div>
+                    <div class="sign_con">
+                        <span class="sign">
+                            <i class="iconfont icon-bianji"></i>
+                            签到
+                        </span>
+                    </div>
+                </section>
+                <div class="hr"></div>
+                <section class="logininfo_op">
+                    <section class="bor_ri">
+                        <div class="logininfo_op_text">动态</div>
+                        <div class="logininfo_op_num">16</div>
+                    </section>
+                    <section class="bor_ri">
+                        <div class="logininfo_op_text">关注</div>
+                        <div class="logininfo_op_num">7</div>
+                    </section>
+                    <section class="bor_ri">
+                        <div class="logininfo_op_text">粉丝</div>
+                        <div class="logininfo_op_num">3</div>
+                    </section>
+                    <section>
+                        <div class="logininfo_op_num">
+                            <i class="iconfont icon-guanyu"></i>
+                        </div>
+                        <div class="logininfo_op_text">我的资料</div>
+                    </section>
+                </section>
+            </section>
+
+            <ul>
+                <li>
+                    <i class="iconfont icon-duanxin"></i>
+                    我的消息
+                    <i class="iconfont icon-you"></i>
+                </li>
+            </ul>
+
+            <ul>
+                <li>
+                    <i class="iconfont icon-zuanshi"></i>
+                    会员中心
+                    <i class="iconfont icon-you"></i>
+                </li>
+                <li>
+                    <i class="iconfont icon-gouwuche"></i>
+                    商城
+                    <i class="iconfont icon-you"></i>
+                </li>
+                <li>
+                    <i class="iconfont icon-xin"></i>
+                    在线听歌免流量
+                    <i class="iconfont icon-you"></i>
+                </li>
+            </ul>
+
+            <ul>
+                <li>
+                    <i class="iconfont icon-iconshezhi01"></i>
+                    设置
+                    <i class="iconfont icon-you"></i>
+                </li>
+                <li>
+                    <i class="iconfont icon-saoyisao"></i>
+                    扫一扫
+                    <i class="iconfont icon-you"></i>
+                </li>
+                <li>
+                    <i class="iconfont icon-huanfu"></i>
+                    主题换肤
+                    <i class="iconfont icon-you"><span class="change_skin">官方白</span></i>
+                </li>
+                <li>
+                    <i class="iconfont icon-dengpao2"></i>
+                    夜间模式
+                    <i class="iconfont icon-you"></i>
+                </li>
+                <li>
+                    <i class="iconfont icon-ttpodicon1"></i>
+                    定时关闭
+                    <i class="iconfont icon-you"></i>
+                </li>
+                <li>
+                    <i class="iconfont icon-alarm-clock"></i>
+                    音乐闹钟
+                    <i class="iconfont icon-you"></i>
+                </li>
+                <li>
+                    <i class="iconfont icon-huanche"></i>
+                    驾驶模式
+                    <i class="iconfont icon-you"></i>
+                </li>
+            </ul>
+
+            <ul>
+                <li>
+                    <i class="iconfont icon-fenxiang1"></i>
+                    分享网易云音乐
+                    <i class="iconfont icon-you"></i>
+                </li>
+                <li>
+                    <i class="iconfont icon-guanyu"></i>
+                    关于
+                    <i class="iconfont icon-you"></i>
+                </li>
+            </ul>
+
+            <ul class="logout_con">
+                <li class="logout" id="logout">
+                    注销
+                </li>
+            </ul>
+        </section>
+
+
+        <!-- 播放器 -->
+        <section class="player_con hideplayer">
+            <div class='frosted-glass'></div>
+            <div class="player_bgmask"></div>
+            <section class="player_headcon">
+                <section class="player_head">
+                    <i class="iconfont icon-houtui" id="player_back"></i>
+                    <div class="player_title">
+                        <div class="player_musicname" id="player_musicname">灰姑娘</div>
+                        <div class="player_musicauthor" id="player_musicauthor">梁咏琪</div>
+                    </div>
+                    <i class="iconfont icon-fenxiang1"></i>
+                </section>
+                <div class="player_line"></div>
+                <section class="player_focus">
+                    <img id="player_pointer" class="player_pointer playpointer" src="./images/source/p-1.png" alt=""/>
+                    <div id="record" class="record playrecord">
+                        <img src="./images/14.jpg" alt=""/>
+                    </div>
+                </section>
+                <section class="player_opcon">
+                    <i class="iconfont icon-xin player_love" id="addmylove"></i>
+                    <i class="iconfont icon-xiazai player_download"></i>
+                    <i class="iconfont icon-pinglun player_comment"></i>
+                    <i class="iconfont icon-caidan1 player_operation"></i>
+                </section>
+                <section class="progress_con">
+                    <span id="curr_time">00:00</span>
+                    <section class="pro_con" id="pro_con">
+                        <progress class="player_pro" id="player_pro" value="0" ></progress>
+                        <div class="pro_slide_btn" id="pro_slide_btn"></div>
+                    </section>
+                    <span id="max_time">00:00</span>
+                </section>
+                <section class="player_opbar">
+                    <i class="iconfont icon-suijibofang player_ctrl"></i>
+                    <i class="iconfont icon-shangyishou player_prev" id="play_prev"></i>
+                    <i class="iconfont icon-zanting1 player_play" id="play_pause"></i>
+                    <i class="iconfont icon-xiayishou player_next" id="play_next"></i>
+                    <i class="iconfont icon-caidan player_playlist"></i>
+                </section>
+                <audio class="player" id="player" src="./music/43.mp3" ></audio>
+            </section>
+        </section>
+
+
+        <footer>
+            <section class="foot_nav_btn" id="find_music" data-num="0">
+                <i class="iconfont icon-wangyiyunyinlezizhi"></i>
+                <div>发现音乐</div>
+            </section>
+            <section class="foot_nav_btn nav_active" id="my_music" data-num="1">
+                <i class="iconfont icon-yinfu0"></i>
+                <div>我的音乐</div>
+            </section>
+            <section class="foot_nav_btn" id="friends" data-num="2">
+                <i class="iconfont icon-ren-copy"></i>
+                <div>朋 友</div>
+            </section>
+            <section class="foot_nav_btn" id="account" data-num="3">
+                <i class="iconfont icon-pengyouquan"></i>
+                <div>账 号</div>
+            </section>
+        </footer>
+        
+    </section>
+
+
+    <script src="./javascript/fontset.js"></script>
+    <script src="./javascript/tmsCheck.js"></script>
+    <script src="./libs/zepto.js/dist/zepto.js" charset="utf-8"></script>
+    <script src="javascript/myfun-zepto-m.js"></script>
+    <script src="./libs/zepto.js/src/ajax.js"></script>
+    <script src="./javascript/mobile.js" charset="utf-8"></script>
+    <script src="./javascript/playerctrl.js"></script>
+</body>
+</html>

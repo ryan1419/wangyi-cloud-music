@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网易云音乐</title>
+    <link rel="stylesheet" href="style/init.css"/>
+    <link rel="stylesheet" href="font/iconfont.css"/>
+    <link rel="stylesheet" href="font_video/iconfont.css"/>
+    <link rel="stylesheet" href="style/style.css"/>
+    <link rel="stylesheet" href="style/video.css"/>
+    <script src="script/jquery-1.11.3.js"></script>
+</head>
+<body>
+    <!--header-->
+    <header id="top">
+        <div class="head_con">
+            <h1>
+                网易云音乐
+                <a class="logo" href="#"></a>
+            </h1>
+
+            <ul class="nav_list">
+                <li>
+                    <a class="head_nav_selectr" href="#">
+                        <span class="head_nav_selectl"></span>
+                        发现音乐
+                        <i class="bottom_icon"></i>
+                    </a>
+                </li>
+                <li class="cut">丨</li>
+                <li><a href="#"><span></span>我的音乐</a></li>
+                <li class="cut">丨</li>
+                <li><a href="#"><span></span>朋友</a></li>
+                <li class="cut">丨</li>
+                <li><a href="#"><span></span>音乐人</a></li>
+                <li class="cut">丨</li>
+                <li><a id="nav_hot" href="#">
+                    <span></span>
+                    下载客户端
+                    <i class="hot"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <input class="head_search" type="text" name="search" placeholder="单曲/歌手/专辑/歌单/MV/用户"/>
+            <a class="login" href="#">登陆<i class="login_icon"></i></a>
+        </div>
+    </header>
+
+    <!-- nav2-->
+    <nav>
+        <div class="nav_con">
+            <ul class="nav_list_b">
+                <li><a href="#">推荐<span></span></a></li>
+                <li><a href="#">排行榜<span></span></a></li>
+                <li><a href="#">歌单<span></span></a></li>
+                <li><a href="#">主播电台<span></span></a></li>
+                <li><a href="#">歌手<span></span></a></li>
+                <li><a href="#">新碟上架<span></span></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--center-->
+    <div class="center_bg">
+        <div class="center_con">
+            <!-- left -->
+            <div class="center_left">
+                <div class="video_title_con">
+                    <h2 class="video_title">Hall Of Fame</h2>
+                    <a class="singer" href="">The Script</a>
+                </div>
+
+                <!-- video con-->
+                <div id="video_con" class="video_con">
+                    <div class="video_wrap">
+                        <video id="video" class="video" src="source/video/hd-Hall%20Of%20Fame.mp4" autoplay></video>
+                        <div class="video_control">
+                            <progress id="play_pro" class="pro" value="0" ></progress>
+                            <i id="pro_mark" class="pro_mark"></i>
+                            <div class=video_control_btn>
+                                <i id="play_pauseBtn" class="icon iconfont icon-bofangqizanting play_btn"></i>
+                                <span class="video_time">
+                                    <span id="current_time" class="current_time">00:00</span>&nbsp;
+                                    <span>/</span>&nbsp;
+                                    <span id="max_time" class="max_time">03:52</span>
+                                </span>
+                                <div class="sound_pro_con">
+                                    <i id="sound_mute" class="icon iconfont icon-yinliangda sound_btn"></i>
+                                    <span id="sound_pro_con" class="sound_pro_wrap">
+                                        <progress id="sound_pro" class="sound_pro" value="1" max="1"></progress>
+                                        <i id="sound_mark" class="sound_pro_icon"></i>
+                                    </span>
+                                    <span class="video_cut">|</span>
+                                    <i class="icon iconfont icon-msnui-pc definition"><span class="definition_text">高清</span></i>
+                                    <span class="video_cut">|</span>
+                                    <i id="full_screen" class="icon iconfont icon-bofangqiquanping full_screen"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- video con end-->
+
+                <div class="operation">
+                    <button><i class="collection"></i>收藏</button>
+                    <button><i class="share"></i>分享</button>
+                </div>
+
+                <div class="comment_con">
+                    <div class="comment_title">
+                        <span class="comment">评论</span>
+                        <span class="comment_num">共2876条评论</span>
+                    </div>
+
+                    <div class="comment_edit">
+                        <div class="comment_edit_con">
+                            <img class="you_headimg" src="source/head_img/109951162809044448.jpg" alt=""/>
+                            <textarea class="comment_textarea" name="comment_textarea" id="comment_textarea" cols="30" rows="10">评论</textarea>
+                            <i class="popf"></i>
+                            <i class="popb"></i>
+                        </div>
+                        <div class="font_operation">
+                            <a href="#"><i class="icon iconfont icon-shouye1"></i></a>
+                            <a href=""><i class="icon iconfont icon-shouye"></i></a>
+                            <button class="send_comment">评论</button>
+                            <span class="allow_input_num">140</span>
+                        </div>
+                    </div>
+
+                    <div class="wonder_comm">
+                        精彩评论
+                    </div>
+                    
+                    <div class="wonder_comm_info">
+                        <a href="#">
+                            <img src="source/head_img/109951162820008308.jpg" alt=""/>
+                        </a>
+                        <div class="wonder_comm_text">
+                            <a class="uesr_name" href="#">TheKitty</a>:
+                            <span class="user_comment">女主用手感受喇叭震动时，说你被感动了没！</span>
+
+                            <div class="user_comment_bottom">
+                                <span class="time">2014年11月29日</span>
+                                <span class="fr">
+                                    <a class="likes" href="#"><span class="likes_icon"></span>(2453)</a>
+                                    <span>丨</span>
+                                    <a class="reply" href="#">回复</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wonder_comm_info">
+                        <a href="#">
+                            <img src="source/head_img/1378787590515328.jpg" alt=""/>
+                        </a>
+                        <div class="wonder_comm_text">
+                            <a class="uesr_name" href="#">梵夜离</a>:
+                            <span class="user_comment">这歌对于那些在社会拼搏的而言比我的天空更加励志！我的天空就是说一群学生高考，高考失败你还可以重考。在社会上失败谁给你机会，没有真正的在社会摸爬滚打就别以为很简单！在社会你自己都不知道什么时候自己会被饿死</span>
+
+                            <div class="user_comment_bottom">
+                                <span class="time">2015年7月16日</span>
+                                <span class="fr">
+                                    <a class="likes" href="#"><span class="likes_icon"></span>(2543)</a>
+                                    <span>丨</span>
+                                    <a class="reply" href="#">回复</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wonder_comm_info">
+                        <a href="#">
+                            <img src="source/head_img/1378787593736044.jpg" alt=""/>
+                        </a>
+                        <div class="wonder_comm_text">
+                            <a class="uesr_name" href="#">我也是微熏了</a>:
+                            <span class="user_comment">中国的歌曲中就是缺这样的 天天情情爱爱的 尼玛的 你的一生都在追求爱情啊 整天弄得青春就等于早恋 真TMDSB</span>
+
+                            <div class="user_comment_bottom">
+                                <span class="time">3月15日 18:49</span>
+                                <span class="fr">
+                                    <a class="likes" href="#"><span class="likes_icon"></span>(2300)</a>
+                                    <span>丨</span>
+                                    <a class="reply" href="#">回复</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wonder_comm_info">
+                        <a href="#">
+                            <img src="source/head_img/1400777824270963.jpg" alt=""/>
+                        </a>
+                        <div class="wonder_comm_text">
+                            <a class="uesr_name" href="#">章郁天</a>:
+                            <span class="user_comment">要是有可以选择打开字幕（歌词）功能就好了</span>
+
+                            <div class="user_comment_bottom">
+                                <span class="time">2015年1月21日</span>
+                                <span class="fr">
+                                    <a class="likes" href="#"><span class="likes_icon"></span>(1325)</a>
+                                    <span>丨</span>
+                                    <a class="reply" href="#">回复</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wonder_comm_info">
+                        <a href="#">
+                            <img src="source/head_img/18762066417873919.jpg" alt=""/>
+                        </a>
+                        <div class="wonder_comm_text">
+                            <a class="uesr_name" href="#">苍蓝公子tri</a>:
+                            <span class="user_comment">比我的天空好听百倍</span>
+
+                            <div class="user_comment_bottom">
+                                <span class="time">2015年1月20日</span>
+                                <span class="fr">
+                                    <a class="likes" href="#"><span class="likes_icon"></span>(1008)</a>
+                                    <span>丨</span>
+                                    <a class="reply" href="#">回复</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="wonder_comm_info">
+                        <a href="#">
+                            <img src="source/head_img/3224867606107166.jpg" alt=""/>
+                        </a>
+                        <div class="wonder_comm_text">
+                            <a class="uesr_name" href="#">倍儿级厨师</a>:
+                            <span class="user_comment">我的天空说是抄袭 而当年吻别改编的take me to your heart就变成了有才？国外月亮不一定更圆 南征北战做得很不错。希望我们能为中国人感觉到自豪而不是一味的践踏</span>
+
+                            <div class="user_comment_bottom">
+                                <span class="time">3月19日 23:25</span>
+                                <span class="fr">
+                                    <a class="likes" href="#"><span class="likes_icon"></span>(712)</a>
+                                    <span>丨</span>
+                                    <a class="reply" href="#">回复</a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- left end -->
+
+            <!-- right -->
+            <div class="center_right">
+                <a class="ad" href="#"><img src="source/ad.bid.jpg" alt=""/></a>
+                <div class="Relevant_MV">
+                    <div class="Relevant_MV_title"><span>相关MV</span></div>
+                    <div class="Relevant_MV_info">
+                        <a class="Relevant_MV_a" href="#">
+                            <img src="source/small_mvimg/2285884774148583.jpg" alt=""/>
+                            <i class="Relevant_MV_playicon"></i>
+                        </a>
+                        <a class="Relevant_MV_name">Superheroes</a>
+                    </div>
+
+                    <div class="Relevant_MV_info">
+                        <a class="Relevant_MV_a" href="#">
+                            <img src="source/small_mvimg/2539871861251106.jpg" alt=""/>
+                            <i class="Relevant_MV_playicon"></i>
+                        </a>
+                        <a class="Relevant_MV_name">Demons</a>
+                    </div>
+
+                    <div class="Relevant_MV_info">
+                        <a class="Relevant_MV_a" href="#">
+                            <img src="source/small_mvimg/263882800667396.jpg" alt=""/>
+                            <i class="Relevant_MV_playicon"></i>
+                        </a>
+                        <a class="Relevant_MV_name">Counting Stars</a>
+                    </div>
+
+                    <div class="Relevant_MV_info">
+                        <a class="Relevant_MV_a" href="#">
+                            <img src="source/small_mvimg/5888984278505716.jpg" alt=""/>
+                            <i class="Relevant_MV_playicon"></i>
+                        </a>
+                        <a class="Relevant_MV_name">Centuries</a>
+                    </div>
+
+                    <div class="Relevant_MV_info">
+                        <a class="Relevant_MV_a" href="#">
+                            <img src="source/small_mvimg/5995636906862846.jpg" alt=""/>
+                            <i class="Relevant_MV_playicon"></i>
+                        </a>
+                        <a class="Relevant_MV_name">Free Loop</a>
+                    </div>
+                </div>
+
+                <div class="Relevant_MV_title"><span>网易云音乐多端下载</span></div>
+                <div class="multi_platform">
+                    <a class="ap" href="#"></a>
+                    <a class="pc" href="#"></a>
+                    <a class="an" href="#"></a>
+                </div>
+                <div class="multi_platform_text"><span>同步歌单，随时畅听320k好音乐</span></div>
+
+                <div class="Relevant_MV_title"><span>网易云音乐公众号</span></div>
+                <div>
+                    <span class="QR_code fl"></span>
+                    <span class="QR_text fr">
+                        关注我，我们才能 <br/>真正拥有彼此啊~
+                    </span>
+                </div>
+            </div>
+            <!-- right end -->
+        </div>
+    </div>
+
+    <!-- footer-->
+    <footer>
+        <div class="foot_con">
+            <div class="recruit_con">
+                <a href="#" class="singer_recruit"></a>
+                <a href="#">独立音乐人招募计划</a><br/>
+                <a href="#">加入我们 即将与超过亿万乐迷互动</a>
+            </div>
+            <div class="recruit_con">
+                <a href="#" class="music_recruit"></a>
+                <a href="#">音乐专栏招募计划</a><br/>
+                <a href="#">加入我们 与同道中人交流心得</a>
+            </div>
+            <div class="service">
+                <a href="#">关于网易</a><span>-</span>
+                <a href="#">客户服务</a><span>-</span>
+                <a href="#">服务条款</a><span>-</span>
+                <a href="#">网站导航</a>
+                <span>网易公司版权所有©1997-2016</span>
+                <br/>
+                <span>杭州乐读科技有限公司运营：</span>
+                <a href="#">浙网文[2015]0415-135号</a>
+                <span class="fr">
+                    <i class="feedback"></i>
+                    <a href="#">意见反馈</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+    <a class="back_top" href="#top"></a>
+
+    <script src="script/script.js"></script>
+    <script src="script/videoscript.js"></script>
+</body>
+</html>

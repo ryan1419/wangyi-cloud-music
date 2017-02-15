@@ -1,0 +1,182 @@
+@font-face {
+    font-family: 'iconfont';  /* project id 199090 */
+    src: url("../font_video/iconfont.ttf");
+}
+
+.video{
+    display:block;
+    width:640px;
+}
+
+.pro{
+    position: absolute;
+    width:640px;
+    height:4px;
+    border-radius: 2px;
+    z-index: 101;
+}
+
+.pro::-webkit-progress-bar {
+    background:linear-gradient(#d6d6d6,#b6b6b6);
+}
+
+.pro::-webkit-progress-value,.sound_pro::-webkit-progress-value {
+    background:linear-gradient(#e61d16,#c3140f);
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.video_control{
+    position: relative;
+    height:40px;
+    background: url("../source/playbar.png") repeat-x left -6px;
+    margin:0;
+    -webkit-user-select:none;
+    transition:bottom .5s ease;
+}
+
+.video_control_btn{
+    height:40px;
+    position: relative;
+    z-index: 100;
+}
+
+.play_btn{
+    color: #ddddf1;
+    line-height: 45px;
+    margin-left:20px;
+    cursor: pointer;
+}
+
+.play_btn:hover{
+    text-shadow: 0 0 8px #fff;
+}
+
+.video_time{
+    margin-left:15px;
+    color:#ddddf1;
+    font-size: 10px;
+}
+
+.sound_btn{
+    color:#ddddf1;
+    cursor: pointer;
+    margin-right: 10px;
+    
+}
+
+.sound_btn:hover{
+    text-shadow: 0 0 8px #fff;
+}
+
+.sound_pro{
+    width:60px;
+    height:5px;
+    border-radius: 2px;
+}
+
+.sound_pro::-webkit-progress-bar{
+    background:linear-gradient(#1b1b1b, #000000);
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.sound_pro_con{
+    display:flex;
+    float: right;
+    height:40px;
+    align-items: center;
+    padding-right: 15px;
+}
+
+.definition{
+    font-size: 12px;
+    cursor: pointer;
+    color:#ddddf1;
+    letter-spacing: 3px;
+}
+
+.definition:hover{
+    text-shadow: 0 0 8px #fff;
+}
+
+.full_screen{
+    font-size: 13px;
+    cursor: pointer;
+    color:#ddddf1
+}
+
+.full_screen:hover{
+    text-shadow: 0 0 8px #fff;
+}
+
+.video_cut{
+    padding:10px;
+    color: #000000;
+    text-shadow: 1px 0 #464646;
+}
+
+.definition_text{
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.pro_mark{
+    display:block;
+    width:12px;
+    height:12px;
+    position: absolute;
+    top:-4px;
+    left:-2px;
+    background: url("../source/dot2.png")no-repeat -1px 0;
+    background-size: 14px 14px;
+    cursor: pointer;
+    z-index: 140;
+    border-radius: 50%;
+}
+
+.pro_mark:hover,.sound_pro_icon:hover{
+    box-shadow: 0 -1px 10px #FFF;
+}
+
+.sound_pro_wrap{
+    display: flex;
+    width:60px;
+    align-items: center;
+    position: relative;
+}
+
+.sound_pro_icon{
+    display:block;
+    width:12px;
+    height:12px;
+    position: absolute;
+    top:-3.5px;
+    left:54px;
+    background: url("../source/dot2.png")no-repeat -1px 0;
+    background-size: 14px 14px;
+    cursor: pointer;
+    z-index: 140;
+    border-radius: 50%;
+}
+
+progress:hover{
+    cursor: pointer;
+}
+
+.video_wrap{
+    position: relative;
+}
+
+#full_screen_hover{
+    position: absolute;
+    width:100%;
+    height:200px;
+    bottom:0;
+    left:0;
+}
+
+.current_time,.max_time{
+    font-family: 'Arial Unicode MS';
+    font-size: 12px;
+}

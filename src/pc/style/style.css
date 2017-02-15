@@ -1,0 +1,627 @@
+@font-face {
+    font-family: 'iconfont';  /* project id 199090 */
+    src: url("../font/iconfont.ttf");
+}
+
+*{
+    outline: none;
+}
+
+header{
+    height:70px;
+    background: url("../source/topbar.png") 0 -80px;
+}
+.head_con{
+    display: flex;
+    width:1100px;
+    height: 70px;
+    margin:0 auto;
+    align-items: center;
+}
+
+.head_con h1{
+    font-size: 0;
+}
+
+
+.logo{
+    display:inline-block;
+    width:162px;
+    height:42px;
+    background: url("../source/topbar.png") no-repeat 0 0;
+    vertical-align: middle;
+}
+
+.nav_list{
+    margin-left:15px;
+}
+
+.nav_list li{
+    display:inline-block;
+    position: relative;
+}
+
+.nav_list li a{
+    display: block;
+    height:70px;
+    line-height: 75px;
+    padding-left:20px;
+    padding-right:18px;
+    color: #cbcbcb;
+    text-shadow: 1px 1px #111;
+}
+
+.cut{
+    width:2px;
+    padding:0;
+    margin:0;
+    color: #0b0d11;
+    text-shadow: 1px 0 #3d3d3d;
+    margin-left:-11px;
+}
+
+.head_nav_selectr{
+    background: url("../source/bg_select.jpg") no-repeat right;
+}
+
+.head_nav_selectl{
+    display:block;
+    position: absolute;
+    width:10px;
+    height:70px;
+    top:0;
+    left:0;
+    background: url("../source/bg_select.jpg") no-repeat left;
+}
+
+.nav_list li a:not([class="head_nav_selectr"]):hover{
+    background: url("../source/topbar.png")no-repeat right -470px;
+}
+
+.nav_list li a:not([class="head_nav_selectr"]):hover span{
+    display:block;
+    position: absolute;
+    width:10px;
+    height:70px;
+    top:0;
+    left:0;
+    background: url("../source/topbar.png") no-repeat left -470px;
+}
+
+#nav_hot{
+    position: relative;
+    padding-right: 38px;
+}
+
+.hot{
+    display:block;
+    position: absolute;
+    width:26px;
+    height:19px;
+    top:20px;
+    left:90px;
+    background: url("../source/topbar.png") no-repeat -191px 0;
+}
+
+.head_search{
+    margin-left:155px;
+    border:none;
+    font-size: 12px;
+    width:215px;
+    height:31px;
+    background: url("../source/topbar.png") no-repeat 0 -550px;
+    text-indent: 2.3em;
+}
+
+.login{
+    display:block;
+    width:50px;
+    margin-left:20px;
+    font-size: 12px;
+    color: #9e9e9e;
+    text-shadow: 1px 1px #111;
+}
+
+.login:hover{
+    text-decoration: underline;
+}
+
+.login_icon{
+    display:inline-block;
+    width:12px;
+    height:7px;
+    margin-left: 5px;
+    background: url("../source/topbar.png") no-repeat right -380px;
+}
+.login:hover .login_icon{
+     background: url("../source/topbar.png") no-repeat right -418px;
+ }
+
+.bottom_icon{
+    display:block;
+    position: absolute;
+    width:14px;
+    height:9px;
+    background:url("../source/topbar.png") no-repeat right top;
+    bottom:-2px;
+    left:40px;
+}
+
+nav{
+    height:35px;
+    background: url("../source/topbar.png") left -230px;
+}
+
+.nav_con{
+    width:1100px;
+    height:35px;
+    margin:0 auto;
+}
+
+.nav_list_b{
+    margin-left:200px;
+}
+
+.nav_list_b li{
+    display:inline-block;
+    margin-right:30px;
+}
+
+.nav_list_b li a{
+    display:block;
+    position: relative;
+    padding:0 12px;
+    color: #fdfdfe;
+    font-size: 12px;
+    text-shadow: 1px 1px #222;
+    line-height: 38px;
+}
+
+.nav_list_b li a:hover{
+    background: url("../source/topbar.png") no-repeat left -268px;
+}
+
+.nav_list_b li a:hover span{
+    display:block;
+    position: absolute;
+    width:12px;
+    height:35px;
+    top:0;
+    right:0;
+    background: url("../source/topbar.png") no-repeat right -268px;
+}
+
+.center_bg{
+    background: #f4f4f4;
+    border-bottom:1px solid #d1d1d1;
+}
+
+.center_con{
+    width:980px;
+    margin:0 auto;
+    border-left:1px solid #d2d2d2;
+    border-right:1px solid #d2d2d2;
+    overflow: hidden;
+}
+
+.center_left{
+    width:640px;
+    padding:25px 30px 9999px 39px;
+    margin-bottom: -9999px;
+    float:left;
+    background: #FFF;
+    border-right: 1px solid #d2d2d2;
+}
+
+.center_right{
+    width:200px;
+    padding:20px 40px 9999px 30px;
+    margin-bottom: -9999px;
+    height:100%;
+    float: right;
+    background: #FFF;
+}
+
+.center_con::after{
+    content: "";
+    display:block;
+    clear: both;
+}
+
+.video_title_con{
+    margin-bottom:14px;
+}
+
+.video_title{
+    font-size: 24px;
+    display:inline-block;
+}
+
+.singer{
+    margin-left:5px;
+    color: #0c73c1;
+    font-size: 12px;
+}
+
+.singer:hover{
+    text-decoration: underline;
+}
+
+.operation{
+    margin:10px 0;
+}
+
+.operation button{
+    border-radius: 4px;
+    width:60px;
+    height:31px;
+    cursor: pointer;
+    border:1px solid #c3c3c3;
+    background:linear-gradient(#fbfbfc, #d9d9d9);
+    font-size: 12px;
+    text-indent: 1.8em;
+    margin-right:8px;
+    position: relative;
+}
+
+.operation button:hover{
+    background:linear-gradient(#FFF, #ddd);
+}
+
+.collection{
+    position: absolute;
+    display:block;
+    width:16px;
+    height:14px;
+    top:7px;
+    left:6px;
+    background: url("../source/icon.png") no-repeat -45px -87px;
+
+}
+
+.share{
+    position: absolute;
+    display:block;
+    width:16px;
+    height:14px;
+    top:8px;
+    left:6px;
+    background: url("../source/icon.png") no-repeat -46px -137px;
+}
+
+.comment_con{
+    margin-top:40px;
+}
+
+.comment_title{
+    border-bottom:2px solid #c10c0c;
+    line-height: 30px;
+}
+
+.comment{
+    font-size: 20px;
+}
+
+.comment_num{
+    font-size: 12px;
+    color:#666;
+}
+
+.comment_edit_con{
+    height:70px;
+    padding:10px 0;
+    position: relative;
+}
+
+.you_headimg{
+    float: left;
+}
+
+.comment_textarea{
+    width:570px;
+    height:63px;
+    resize: none;
+    border:1px solid #a8a8a8;
+    border-radius: 4px;
+    float: right;
+    margin-left:10px;
+    color:#666;
+    text-indent: 5px;
+    font-size: 13px;
+}
+
+.popb{
+    display: block;
+    border:8px solid transparent;
+    border-right-color:#FFF ;
+    position: absolute;
+    top:27px;
+    left:53px;
+}
+
+.popf{
+    display: block;
+    border:8px solid transparent;
+    border-right-color: #a8a8a8;
+    position: absolute;
+    top:27px;
+    left:52px;
+}
+
+.font_operation{
+    padding-left: 60px;
+}
+
+.icon-shouye1,.icon-shouye{
+    font-size: 26px;
+    color:#666;
+}
+
+.allow_input_num{
+    font-size: 12px;
+    color:#666;
+    line-height: 28px;
+    margin-right: 15px;
+    float: right;
+}
+
+.send_comment{
+    border-radius: 4px;
+    border:1px solid #2475c1;
+    background: linear-gradient(#5a92d7, #3474be);
+    color:#FFF;
+    line-height: 25px;
+    padding:0 8px;
+    cursor: pointer;
+    float: right;
+}
+
+.wonder_comm{
+    margin-top:15px;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 30px;
+    border-bottom:1px solid #cecece;
+}
+
+.wonder_comm_info{
+    padding:15px 0;
+}
+
+.wonder_comm_info:not(:last-child){
+    border-bottom: 1px dotted #CCC;
+}
+
+.wonder_comm_info img{
+    float: left;
+}
+
+.uesr_name{
+    color: #2a73c1;
+}
+
+.uesr_name:hover{
+    text-decoration: underline;
+}
+
+.wonder_comm_text{
+    padding-left:60px;
+    font-size: 12px;
+}
+
+.user_comment_bottom{
+    margin-top:19px;
+    color:#666;
+}
+
+.likes{
+    color:#666;
+}
+
+.reply{
+    font-weight: 500;
+    color:#666;
+}
+
+.likes:hover,.reply:hover{
+    text-decoration: underline;
+}
+
+.likes_icon{
+    display: inline-block;
+    vertical-align: baseline;
+    width:12px;
+    height:12px;
+    background: url("../source/icon.png") no-repeat -37px -680px;
+    cursor: pointer;
+}
+
+.Relevant_MV_info{
+    margin:15px 0;
+}
+
+.Relevant_MV_info::after{
+    content: "";
+    display:block;
+    clear: both;
+}
+
+.Relevant_MV_title{
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 30px;
+    border-bottom:1px solid #bbb;
+    margin:20px 0;
+}
+
+.Relevant_MV_info img{
+    float: left;
+}
+
+.Relevant_MV_name{
+    line-height: 60px;
+    margin-left:10px;
+}
+
+.Relevant_MV_name:hover{
+    text-decoration: underline;
+}
+
+.Relevant_MV_a{
+    position: relative;
+    display: block;
+    float: left;
+    width:80px;
+    height:60px;
+}
+
+.Relevant_MV_playicon{
+    display:block;
+    position: absolute;
+    width:26px;
+    height:26px;
+    top:18px;
+    left:27px;
+    /*top:0;*/
+    /*left:0;*/
+    background: url("../source/iconall.png") no-repeat -1px -141px;
+}
+
+.Relevant_MV_a:hover .Relevant_MV_playicon{
+    background: url("../source/iconall.png") no-repeat -1px -171px;
+}
+
+.multi_platform{
+    padding:0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ap{
+    display:block;
+    width:31px;
+    height:48px;
+    background: url("../source/sprite.png") no-repeat -6px -392px;
+}
+
+.ap:hover{
+    background: url("../source/sprite.png") no-repeat -6px -472px;
+}
+
+.pc{
+    display:block;
+    width:61px;
+    height:48px;
+    background: url("../source/sprite.png") no-repeat -72px -392px;
+}
+
+.pc:hover{
+    background: url("../source/sprite.png") no-repeat -72px -472px;
+}
+
+.an{
+    display:block;
+    width:30px;
+    height:48px;
+    background: url("../source/sprite.png") no-repeat -163px -392px;
+}
+
+.an:hover{
+    background: url("../source/sprite.png") no-repeat -163px -472px;
+}
+
+
+
+
+
+.multi_platform_text{
+    color:#999;
+    font-size: 12px;
+    margin-top:20px;
+    margin-bottom: 40px;
+}
+
+.QR_code{
+    display:block;
+    width:72px;
+    height:72px;
+    background: url("../source/sprite.png") no-repeat left -300px;
+}
+
+.QR_text{
+    margin-top:35px;
+    margin-right:10px;
+    font-size: 12px;
+    color:#999;
+}
+
+.back_top{
+    position: fixed;
+    display: none;
+    width:49px;
+    height:44px;
+    top: 480px;
+    right:125px;
+    background:url("../source/sprite.png") no-repeat -265px -46px;
+}
+
+.back_top:hover{
+    background:url("../source/sprite.png") no-repeat -325px -46px;
+}
+
+footer{
+    background: #f7f8f8;
+}
+
+.foot_con{
+    display: flex;
+    width:980px;
+    height:126px;
+    margin:0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recruit_con{
+    width:250px;
+    line-height: 18px;
+}
+
+.recruit_con a{
+    font-size: 12px;
+    color:#555;
+}
+
+.singer_recruit{
+    display: block;
+    width:35px;
+    height:35px;
+    float: left;
+    margin-right: 10px;
+    background: url("../source/sprite.png") no-repeat -405px -85px ;
+}
+
+.music_recruit{
+    display: block;
+    width:33px;
+    height:36px;
+    float: left;
+    margin-left:30px;
+    margin-right: 10px;
+    background: url("../source/sprite.png") no-repeat -405px -128px ;
+}
+
+.service{
+    font-size: 12px;
+    color:#555;
+    line-height: 20px;
+}
+
+.feedback{
+    display:inline-block;
+    vertical-align: bottom;
+    width:19px;
+    height:17px;
+    background: url("../source/icon.png") no-repeat left -39px ;
+}
